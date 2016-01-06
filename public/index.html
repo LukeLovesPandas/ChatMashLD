@@ -1,7 +1,11 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
  <head>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <meta charset="utf-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
  <title>Socket.IO chat</title>
  <style>
  * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,16 +26,8 @@
  </form>
  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
- <script>
- var socket = io();
- $('form').submit(function(){
- socket.emit('chat message', $('#m').val());
- $('#m').val('');
- return false;
- });
- socket.on('chat message', function(msg){
- $('#messages').append($('<li>').text(msg));
- });
- </script>
+ <script type="text/javascript" src="js/index.js"></script>
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
  </body>
 </html>
